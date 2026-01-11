@@ -6,9 +6,9 @@ import { calculateCompoundInterest } from './utils/finance';
 
 function App() {
   const [values, setValues] = useState({
-    initialAmount: 1000000,
-    annualContribution: 120000,
-    interestRate: 5,
+    initialAmount: 30000000,
+    annualContribution: 1200000,
+    interestRate: 4,
     years: 20
   });
 
