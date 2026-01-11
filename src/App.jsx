@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import InputForm from './components/InputForm';
 import ResultTable from './components/ResultTable';
+import ResultChart from './components/ResultChart';
 import { calculateCompoundInterest } from './utils/finance';
 
 function App() {
@@ -40,8 +41,19 @@ function App() {
       </header>
 
       <main className="main-content">
-        <InputForm values={values} handleChange={handleChange} />
-        <ResultTable data={results} />
+        <div className="left-column">
+          <InputForm values={values} handleChange={handleChange} />
+        </div>
+        <div className="right-column">
+          <div className="card-container">
+            <h2 className="section-title">資産推移シミュレーション</h2>
+            <ResultChart data={results} />
+          </div>
+          <div className="card-container" style={{ marginTop: '2rem' }}>
+            <h2 className="section-title">詳細データ</h2>
+            <ResultTable data={results} />
+          </div>
+        </div>
       </main>
     </div>
   );
