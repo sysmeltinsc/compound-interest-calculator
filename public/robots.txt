@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sysmeltinsc.github.io/compound-interest-calculator/sitemap.xml

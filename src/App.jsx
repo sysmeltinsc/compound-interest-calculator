@@ -41,10 +41,10 @@ function App() {
       </header>
 
       <main className="main-content">
-        <div className="left-column">
+        <section className="left-column" aria-label="計算設定">
           <InputForm values={values} handleChange={handleChange} />
-        </div>
-        <div className="right-column">
+        </section>
+        <section className="right-column" aria-label="シミュレーション結果">
           <div className="card-container">
             <h2 className="section-title">資産推移シミュレーション</h2>
             <ResultChart data={results} />
@@ -53,7 +53,7 @@ function App() {
             <h2 className="section-title">詳細データ</h2>
             <ResultTable data={results} />
           </div>
-        </div>
+        </section>
       </main>
     </div>
   );
